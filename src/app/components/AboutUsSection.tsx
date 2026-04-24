@@ -2,11 +2,11 @@ import { motion, useInView } from "motion/react";
 import { Check, Lightbulb, Rocket, Target } from "lucide-react";
 import { useRef } from "react";
 
-const missions = [
-  "Menghadirkan camilan sehat yang unik, lezat, dan bernilai gizi tambahan.",
-  "Mengoptimalkan pemanfaatan kulit buah naga untuk mengurangi food waste.",
-  "Membangun brand usaha mahasiswa yang profesional, berkelanjutan, dan layak dikembangkan.",
-  "Mendorong gaya hidup sehat melalui inovasi pangan yang menarik bagi pasar muda.",
+const highlightPoints = [
+  "Mengurangi limbah pangan",
+  "Camilan sehat dan inovatif",
+  "Warna alami tanpa pewarna buatan",
+  "Mendukung gaya hidup sehat",
 ];
 
 const highlights = [
@@ -14,19 +14,19 @@ const highlights = [
     icon: Target,
     title: "Visi",
     description:
-      "Menjadi brand camilan sehat inovatif yang dikenal karena kualitas premium, tampilan menarik, dan kontribusinya terhadap pengurangan limbah pangan.",
+      "Menjadi brand camilan sehat berbahan inovatif yang bernilai ekonomi tinggi dan ramah lingkungan.",
   },
   {
     icon: Rocket,
     title: "Misi",
     description:
-      "Mengubah potensi limbah kulit buah naga menjadi produk yang bernilai ekonomi tinggi, relevan bagi pasar, dan siap menjadi usaha nyata.",
+      "Mengolah kulit buah naga menjadi produk pangan inovatif, sehat, dan menarik bagi masyarakat modern.",
   },
   {
     icon: Lightbulb,
     title: "Noble Purpose",
     description:
-      "Menyatukan kesehatan, kreativitas, dan keberlanjutan dalam satu produk yang memberi manfaat bagi konsumen sekaligus lingkungan.",
+      "Menciptakan usaha berkelanjutan yang memberi manfaat bagi konsumen sekaligus lingkungan.",
   },
 ];
 
@@ -44,6 +44,29 @@ export default function AboutUsSection() {
         <div className="absolute left-[-6%] top-24 h-80 w-80 rounded-full bg-pink-200/45 blur-3xl" />
         <div className="absolute right-[-10%] top-32 h-96 w-96 rounded-full bg-fuchsia-200/35 blur-3xl" />
         <div className="absolute bottom-10 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-emerald-100/40 blur-3xl" />
+        {Array.from({ length: 10 }).map((_, index) => (
+          <motion.div
+            key={index}
+            animate={{
+              y: [0, index % 2 === 0 ? -14 : 16, 0],
+              opacity: [0.14, 0.32, 0.14],
+              scale: [1, 1.15, 1],
+            }}
+            transition={{
+              duration: 6 + index,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: index * 0.25,
+            }}
+            className="absolute rounded-full border border-white/35 bg-white/18 backdrop-blur-sm"
+            style={{
+              width: `${18 + (index % 4) * 16}px`,
+              height: `${18 + (index % 4) * 16}px`,
+              left: `${6 + index * 9}%`,
+              top: `${12 + (index % 5) * 14}%`,
+            }}
+          />
+        ))}
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
@@ -63,7 +86,7 @@ export default function AboutUsSection() {
             className="mb-5 text-5xl font-bold text-[#551438] md:text-6xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Dari Limbah yang Sering Diabaikan, Menjadi Produk yang Punya Nilai Tinggi
+            Tentang Kami
           </h2>
         </motion.div>
 
@@ -79,32 +102,29 @@ export default function AboutUsSection() {
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               <p>
-                Selama ini banyak orang hanya menikmati daging buah naga, sementara kulitnya
-                langsung dibuang dan dianggap sebagai limbah yang tidak bernilai. Padahal, kulit
-                buah naga masih memiliki kandungan nutrisi tinggi seperti serat, vitamin C,
-                antioksidan, betasianin, flavonoid, dan senyawa fenolik yang sangat bermanfaat
-                bagi kesehatan tubuh.
+                Selama ini banyak orang hanya memanfaatkan daging buah naga, sementara kulitnya
+                sering dianggap limbah dan langsung dibuang. Padahal, kulit buah naga memiliki
+                kandungan serat, vitamin C, antioksidan, dan senyawa alami yang bermanfaat bagi
+                kesehatan.
               </p>
               <p>
-                Kurangnya pemanfaatan limbah pangan ini menjadi peluang inovasi yang bernilai
-                ekonomi sekaligus mendukung pengurangan food waste di masyarakat.
-              </p>
-              <p>
-                <span className="font-semibold text-[#c33478]">NAGYOZA</span> hadir sebagai solusi
-                inovatif di bidang food and beverage dengan menghadirkan gyoza berbahan tambahan
-                kulit buah naga pada adonan kulit serta saus pelengkapnya. Produk ini menawarkan
-                camilan sehat yang unik, lezat, memiliki warna alami tanpa pewarna buatan, serta
-                nilai gizi tambahan yang tidak dimiliki gyoza biasa.
-              </p>
-              <p>
-                Usaha ini dikembangkan oleh tim mahasiswa sebagai bentuk kreativitas, inovasi,
-                kewirausahaan berkelanjutan, serta dukungan terhadap gaya hidup sehat dan ramah
-                lingkungan.
+                <span className="font-semibold text-[#c33478]">NAGYOZA</span> hadir sebagai
+                inovasi camilan sehat berupa gyoza dan saus berbahan kulit buah naga,
+                menghadirkan produk yang lezat, bernilai gizi, ramah lingkungan, dan memiliki
+                nilai ekonomi tinggi.
               </p>
             </div>
 
             <div className="mt-8 grid gap-4">
-              {missions.map((mission, index) => (
+              <div className="mb-1">
+                <p
+                  className="text-sm font-semibold uppercase tracking-[0.24em] text-pink-500"
+                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                >
+                  Highlight Point
+                </p>
+              </div>
+              {highlightPoints.map((mission, index) => (
                 <motion.div
                   key={mission}
                   initial={{ opacity: 0, x: -18 }}

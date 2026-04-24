@@ -5,9 +5,9 @@ import BackgroundDecorations from "./BackgroundDecorations";
 import Logo from "./Logo";
 
 const heroStats = [
-  { label: "Natural Color", value: "100%" },
-  { label: "Harga Mulai", value: "Rp15K" },
-  { label: "Value", value: "Healthy + Premium" },
+  { label: "Warna Produk", value: "100% Alami" },
+  { label: "Harga Mulai", value: "Rp 15.000" },
+  { label: "Nilai Produk", value: "Sehat + Premium" },
 ];
 
 export default function HeroSection() {
@@ -27,6 +27,32 @@ export default function HeroSection() {
         <div className="absolute -left-24 top-16 h-80 w-80 rounded-full bg-pink-300/35 blur-3xl" />
         <div className="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-fuchsia-300/30 blur-3xl" />
         <div className="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-emerald-200/25 blur-3xl" />
+      </div>
+
+      <div className="absolute inset-0">
+        {Array.from({ length: 14 }).map((_, index) => (
+          <motion.div
+            key={`ring-${index}`}
+            animate={{
+              y: [0, index % 2 === 0 ? -20 : 18, 0],
+              opacity: [0.12, 0.28, 0.12],
+              scale: [1, 1.08, 1],
+            }}
+            transition={{
+              duration: 7 + index,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: index * 0.18,
+            }}
+            className="absolute rounded-full border border-white/30"
+            style={{
+              width: `${38 + (index % 4) * 26}px`,
+              height: `${38 + (index % 4) * 26}px`,
+              left: `${4 + index * 7}%`,
+              top: `${10 + (index % 6) * 12}%`,
+            }}
+          />
+        ))}
       </div>
 
       {Array.from({ length: 12 }).map((_, index) => (
@@ -218,15 +244,15 @@ export default function HeroSection() {
                     className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-pink-500"
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
-                    Startup-ready impression
+                    Inovasi Produk
                   </p>
                   <p
                     className="text-lg leading-8 text-[#6a4257]"
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
-                    Clean premium layout, glassmorphism ringan, bubble floating effect, dan
-                    komposisi visual lembut membuat NAGYOZA tampil seperti brand makanan yang
-                    siap pitching dan siap launching.
+                    NAGYOZA memadukan gyoza lezat, saus khas kulit buah naga, tampilan warna
+                    alami, dan konsep ramah lingkungan dalam satu produk yang modern dan
+                    berkarakter.
                   </p>
                 </motion.div>
               </div>

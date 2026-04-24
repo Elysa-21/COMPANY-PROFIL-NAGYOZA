@@ -44,8 +44,8 @@ export default function Navbar() {
         <div
           className={`mx-auto flex max-w-7xl items-center justify-between rounded-full border px-5 py-3 transition-all duration-500 md:px-7 ${
             isScrolled
-              ? "border-white/55 bg-white/78 shadow-[0_25px_80px_rgba(219,39,119,0.18)] backdrop-blur-xl"
-              : "border-white/20 bg-white/10 shadow-[0_20px_60px_rgba(168,85,247,0.14)] backdrop-blur-md"
+              ? "border-white/55 bg-white/82 shadow-[0_25px_80px_rgba(219,39,119,0.18)] backdrop-blur-xl"
+              : "border-white/45 bg-white/55 shadow-[0_20px_60px_rgba(168,85,247,0.12)] backdrop-blur-xl"
           }`}
         >
           <button
@@ -62,9 +62,7 @@ export default function Navbar() {
                 key={item.label}
                 type="button"
                 onClick={() => scrollToSection(item.href)}
-                className={`group relative text-sm font-semibold transition-colors ${
-                  isScrolled ? "text-[#6d214d]" : "text-white"
-                }`}
+                className="group relative text-sm font-semibold text-[#7a2954] transition-colors hover:text-[#561437]"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 {item.label}
@@ -87,9 +85,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className={`rounded-full p-2 md:hidden ${
-              isScrolled ? "bg-pink-50 text-pink-600" : "bg-white/10 text-white"
-            }`}
+            className="rounded-full bg-pink-50 p-2 text-pink-600 md:hidden"
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

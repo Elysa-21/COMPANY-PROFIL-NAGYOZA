@@ -19,12 +19,13 @@ export default function BackgroundDecorations() {
         className="absolute bottom-16 left-1/3 h-80 w-80 rounded-full bg-gradient-to-br from-emerald-200/25 to-pink-200/20 blur-3xl"
       />
 
-      {Array.from({ length: 9 }).map((_, index) => (
+      {Array.from({ length: 14 }).map((_, index) => (
         <motion.div
           key={index}
           animate={{
             y: [0, index % 2 === 0 ? -16 : 16, 0],
-            opacity: [0.2, 0.5, 0.2],
+            x: [0, index % 3 === 0 ? 8 : -8, 0],
+            opacity: [0.16, 0.42, 0.16],
             scale: [1, 1.18, 1],
           }}
           transition={{
@@ -37,8 +38,31 @@ export default function BackgroundDecorations() {
           style={{
             width: `${10 + (index % 4) * 8}px`,
             height: `${10 + (index % 4) * 8}px`,
-            left: `${6 + index * 10}%`,
-            top: `${18 + (index % 5) * 12}%`,
+            left: `${4 + index * 7}%`,
+            top: `${14 + (index % 5) * 12}%`,
+          }}
+        />
+      ))}
+
+      {Array.from({ length: 8 }).map((_, index) => (
+        <motion.div
+          key={`outline-${index}`}
+          animate={{
+            y: [0, index % 2 === 0 ? -12 : 12, 0],
+            opacity: [0.08, 0.22, 0.08],
+          }}
+          transition={{
+            duration: 8 + index,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: index * 0.28,
+          }}
+          className="absolute rounded-full border border-white/30"
+          style={{
+            width: `${42 + (index % 3) * 24}px`,
+            height: `${42 + (index % 3) * 24}px`,
+            left: `${10 + index * 10}%`,
+            top: `${8 + (index % 4) * 18}%`,
           }}
         />
       ))}
