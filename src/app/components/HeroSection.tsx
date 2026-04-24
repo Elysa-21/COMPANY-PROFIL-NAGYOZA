@@ -5,7 +5,7 @@ import BackgroundDecorations from "./BackgroundDecorations";
 import Logo from "./Logo";
 
 const heroStats = [
-  { label: "Warna Produk", value: "100% Alami" },
+  { label: "Warna", value: "100% Alami" },
   { label: "Harga Mulai", value: "Rp 15.000" },
   { label: "Nilai Produk", value: "Sehat + Premium" },
 ];
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 className="text-sm font-semibold uppercase tracking-[0.24em] text-pink-700"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
-                Premium Student Food Brand
+                From Waste to Premium Food
               </span>
             </div>
 
@@ -191,71 +191,37 @@ export default function HeroSection() {
             <div className="absolute -right-10 top-8 hidden h-32 w-32 rounded-full border border-white/50 bg-white/25 lg:block" />
             <div className="absolute -left-12 bottom-20 hidden h-24 w-24 rounded-full bg-emerald-200/40 blur-xl lg:block" />
 
-            <div className="grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
+            <div className="grid gap-5">
               <motion.div
                 whileHover={{ y: -8 }}
                 className="overflow-hidden rounded-[36px] border border-white/55 bg-white/50 p-3 shadow-[0_30px_90px_rgba(236,72,153,0.18)] backdrop-blur-2xl"
               >
                 <div className="relative overflow-hidden rounded-[28px]">
-                  <img
-                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80"
-                    alt="Premium gyoza NAGYOZA"
-                    className="h-[470px] w-full object-cover transition-transform duration-700 hover:scale-110"
+                  <video
+                    src="/assets/foto-produk/video-produk.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    className="h-[470px] w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(71,18,53,0.06),rgba(71,18,53,0.62))]" />
-                  <div className="absolute bottom-6 left-6 right-6 rounded-[24px] border border-white/30 bg-white/18 p-5 backdrop-blur-md">
-                    <p
-                      className="mb-2 text-sm font-semibold uppercase tracking-[0.28em] text-pink-100"
-                      style={{ fontFamily: "'Poppins', sans-serif" }}
-                    >
-                      Signature Product
-                    </p>
-                    <h3
-                      className="text-3xl font-bold text-white"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
-                      Gyoza premium dengan tampilan natural pink yang mencuri perhatian.
-                    </h3>
-                  </div>
                 </div>
               </motion.div>
 
-              <div className="flex flex-col gap-5">
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  className="overflow-hidden rounded-[32px] border border-white/60 bg-white/60 p-3 shadow-[0_22px_70px_rgba(236,72,153,0.16)] backdrop-blur-xl"
-                >
-                  <div className="relative overflow-hidden rounded-[24px]">
-                    <img
-                      src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=1000&q=80"
-                      alt="Buah naga premium"
-                      className="h-[226px] w-full object-cover transition-transform duration-700 hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(83,18,60,0.04),rgba(83,18,60,0.5))]" />
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="rounded-[32px] border border-white/55 bg-white/70 p-7 shadow-[0_18px_60px_rgba(236,72,153,0.14)] backdrop-blur-xl"
-                >
-                  <p
-                    className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-pink-500"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}
-                  >
-                    Inovasi Produk
-                  </p>
-                  <p
-                    className="text-lg leading-8 text-[#6a4257]"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}
-                  >
-                    NAGYOZA memadukan gyoza lezat, saus khas kulit buah naga, tampilan warna
-                    alami, dan konsep ramah lingkungan dalam satu produk yang modern dan
-                    berkarakter.
-                  </p>
-                </motion.div>
-              </div>
+              <motion.div
+                whileHover={{ y: -8 }}
+                className="overflow-hidden rounded-[32px] border border-white/60 bg-white/60 p-3 shadow-[0_22px_70px_rgba(236,72,153,0.16)] backdrop-blur-xl"
+              >
+                <div className="relative overflow-hidden rounded-[24px]">
+                  <img
+                    src="/assets/foto-produk/foto-produk.jpeg"
+                    alt="Foto produk NAGYOZA"
+                    className="h-[260px] w-full object-cover transition-transform duration-700 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(83,18,60,0.04),rgba(83,18,60,0.5))]" />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
