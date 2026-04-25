@@ -6,8 +6,8 @@ import Logo from "./Logo";
 
 const heroStats = [
   { label: "Warna", value: "100% Alami" },
-  { label: "Harga Mulai", value: "Rp 15.000" },
-  { label: "Nilai Produk", value: "Sehat + Premium" },
+  { label: "Harga", value: "Rp 15.000" },
+  { label: "Keunggulan", value: "Inovatif" },
 ];
 
 export default function HeroSection() {
@@ -111,7 +111,7 @@ export default function HeroSection() {
                   className="text-base text-[#7c4c63]"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
-                  Inovasi gyoza dan saus berbahan kulit buah naga
+                   Premium Healthy Snack
                 </p>
               </div>
             </div>
@@ -123,17 +123,17 @@ export default function HeroSection() {
               NAGYOZA
             </h1>
             <h2
-              className="mb-6 text-2xl font-semibold text-[#8a2f61] md:text-4xl"
+              className="mb-6 text-2xl font-semibold text-[#8a2f61] md:text-3xl"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Gyoza Sehat dari Kulit Buah Naga
+              UNIK WARNANYA, NAGIH RASANYA!
             </h2>
             <p
               className="max-w-2xl text-lg leading-8 text-[#6d4b5d] md:text-xl"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Inovasi camilan sehat, lezat, bergizi, dan ramah lingkungan dari
-              pemanfaatan kulit buah naga yang selama ini sering terbuang sia-sia.
+              pemanfaatan kulit buah naga.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -203,8 +203,9 @@ export default function HeroSection() {
                     muted
                     loop
                     playsInline
-                    controls
-                    className="h-[470px] w-full object-cover"
+                    disablePictureInPicture
+                    controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+                    className="pointer-events-none h-[470px] w-full object-cover"
                   />
                 </div>
               </motion.div>

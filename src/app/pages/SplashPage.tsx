@@ -166,7 +166,7 @@ export default function SplashPage({ onComplete }: { onComplete: () => void }) {
             className="mb-12 text-xl font-medium text-white/90 md:text-2xl"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Inovasi camilan sehat dengan sentuhan visual premium
+            Premium Healthy Snack
           </motion.p>
 
           <motion.div
