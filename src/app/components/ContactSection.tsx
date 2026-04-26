@@ -37,7 +37,7 @@ const details = [
   {
     icon: MapPin,
     title: "Lokasi Usaha",
-    value: "Unit usaha mahasiswa PMW, Indonesia",
+    value: "Magetan, Jawa Timur, indonesia",
   },
   {
     icon: Clock3,
@@ -79,14 +79,13 @@ export default function ContactSection() {
             className="mb-5 text-5xl font-bold text-[#54123b] md:text-6xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Siap Menjadi Signature Snack yang Layak Dipresentasikan dan Dipasarkan
+            Kolaborasi & Pemesanan
           </h2>
           <p
             className="text-lg leading-8 text-[#7b4262]"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Hubungi tim NAGYOZA untuk pemesanan, presentasi usaha, kolaborasi event kampus,
-            maupun kebutuhan branding produk untuk showcase PMW.
+            Hubungi tim NAGYOZA untuk pemesanan dan kolaborasi usaha.
           </p>
         </motion.div>
 
@@ -147,25 +146,12 @@ export default function ContactSection() {
             className="rounded-[32px] border border-[#ffd6e4] bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(255,240,247,0.9))] p-8 shadow-[0_32px_90px_rgba(236,72,153,0.16)]"
           >
             <div className="mb-8 rounded-[28px] bg-gradient-to-br from-[#ff5a9f] via-[#ff8fc5] to-[#f4b4d3] p-8 text-white shadow-[0_25px_70px_rgba(236,72,153,0.28)]">
-              <p
-                className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-white/80"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
-              >
-                Brand Touchpoint
-              </p>
               <h3
                 className="mb-4 text-3xl font-bold"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                NAGYOZA siap tampil sebagai brand makanan mahasiswa yang serius dan berkelas.
+                NAGYOZA siap tampil sebagai brand camilan premium yang menarik, berkualitas, dan siap dipasarkan.
               </h3>
-              <p
-                className="text-sm leading-7 text-white/90"
-                style={{ fontFamily: "'Poppins', sans-serif" }}
-              >
-                Ideal untuk presentasi dosen PMW, promosi digital, booth kampus, hingga validasi
-                pasar awal menuju usaha yang siap launching.
-              </p>
             </div>
 
             <div className="space-y-4">

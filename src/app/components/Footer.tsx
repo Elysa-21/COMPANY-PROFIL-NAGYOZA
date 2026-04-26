@@ -65,7 +65,7 @@ export default function Footer() {
               className="mt-4 text-sm uppercase tracking-[0.28em] text-pink-200"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Unik warnanya, premium pengalamannya.
+              Unik Warnanya, Nagih Rasanya!
             </p>
           </div>
 

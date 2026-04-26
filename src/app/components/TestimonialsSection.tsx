@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
             className="mb-5 text-5xl font-bold text-[#541338] md:text-6xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Pengalaman Pelanggan
+            Apa Kata Orang?
           </h2>
           <p
             className="text-lg leading-8 text-[#765160]"
