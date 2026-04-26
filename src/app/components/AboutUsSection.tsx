@@ -90,8 +90,7 @@ export default function AboutUsSection() {
                 menjadi gyoza dan saus yang lezat, bernilai gizi, serta ramah lingkungan.
               </p>
               <p className="text-base leading-7 text-[#856474]">
-                Inovasi ini menghadirkan produk yang menarik secara visual, relevan untuk gaya
-                hidup sehat, dan memiliki cerita brand yang kuat.
+                 Bukan sekadar camilan, tetapi inovasi pangan bernilai tinggi yang menggabungkan kesehatan, keberlanjutan, dan cita rasa premium.
               </p>
             </div>
 
@@ -136,7 +135,7 @@ export default function AboutUsSection() {
             <div className="overflow-hidden rounded-[34px] border border-white/70 bg-white/60 p-4 shadow-[0_30px_90px_rgba(236,72,153,0.14)] backdrop-blur-xl">
               <div className="overflow-hidden rounded-[26px]">
                 <img
-                  src="/assets/foto-produk/foto kulit buah.jpg"
+                  src="/assets/foto-produk/foto kulit buah.png"
                   alt="Kulit buah naga estetik"
                   className="h-[520px] w-full object-cover transition-transform duration-700 hover:scale-105"
                 />

@@ -1,39 +1,25 @@
 import { motion, useInView } from "motion/react";
-import { Box, PlayCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { useRef } from "react";
 
-const productCards = [
+const showcaseCards = [
   {
-    title: "Gyoza Kulit Buah Naga",
-    image:
-      "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "Kulit gyoza dengan sentuhan olahan kulit buah naga menghadirkan warna alami yang cantik, tekstur lembut, dan tampilan premium tanpa pewarna buatan.",
+    title: "Gyoza Premium",
+    subtitle: "Tekstur lembut dan warna alami yang menggugah selera.",
+    image: "/assets/foto-produk/close up premium.jpeg",
+    accent: "from-[#fff7fa] via-[#ffd7e8] to-[#ff9ec4]",
   },
   {
-    title: "Saus Kulit Buah Naga",
-    image:
-      "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80",
-    description:
-      "Saus khas NAGYOZA memberikan aksen rasa yang unik, segar, dan berbeda, sekaligus memperkuat identitas produk sebagai camilan inovatif.",
-  },
-];
-
-const gallery = [
-  {
-    title: "Foto Produk Premium",
-    image:
-      "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80",
+    title: "Saus Signature",
+    subtitle: "Saus khas kulit buah naga dengan cita rasa unik.",
+    image: "/assets/foto-produk/saus signture.png",
+    accent: "from-[#fffaf3] via-[#ffe7ef] to-[#ff8ab7]",
   },
   {
-    title: "Foto Close Up Produk",
-    image:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    title: "Kemasan Produk",
-    image:
-      "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80",
+    title: "Premium Packaging",
+    subtitle: "Kemasan modern yang siap dipasarkan secara profesional.",
+    image: "/assets/foto-produk/packaging produk.jpeg",
+    accent: "from-[#fff9f5] via-[#ffe8de] to-[#ffc1d8]",
   },
 ];
 
@@ -45,175 +31,153 @@ export default function ProductSection() {
     <section
       ref={ref}
       id="produk"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fff0f6_0%,#ffe3ef_35%,#f7ddf7_75%,#fff6ef_100%)] py-24"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#fffaf8_0%,#fff2f6_28%,#ffe4ef_58%,#fff5ee_100%)] py-24"
     >
       <div className="absolute inset-0">
-        <div className="absolute left-10 top-16 h-72 w-72 rounded-full bg-pink-300/35 blur-3xl" />
-        <div className="absolute right-0 top-32 h-80 w-80 rounded-full bg-fuchsia-300/30 blur-3xl" />
-        <div className="absolute bottom-12 left-1/3 h-56 w-56 rounded-full bg-amber-100/35 blur-3xl" />
+        <div className="absolute left-[-8%] top-12 h-72 w-72 rounded-full bg-pink-200/45 blur-3xl" />
+        <div className="absolute right-[-5%] top-24 h-80 w-80 rounded-full bg-fuchsia-200/35 blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 h-56 w-56 rounded-full bg-rose-100/50 blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 26 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.75 }}
-          className="mx-auto mb-14 max-w-3xl text-center"
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-14 max-w-4xl text-center"
         >
           <span
-            className="mb-4 inline-flex rounded-full border border-pink-200 bg-white/85 px-4 py-2 text-sm font-semibold text-pink-700 shadow-sm"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-pink-200/80 bg-white/70 px-5 py-2 text-sm font-semibold text-pink-700 shadow-[0_8px_24px_rgba(236,72,153,0.08)] backdrop-blur-md"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            Produk
+            <Sparkles className="h-4 w-4" />
+            Produk NAGYOZA
           </span>
           <h2
-            className="mb-5 text-5xl font-bold text-[#59173d] md:text-6xl"
+            className="mx-auto mb-5 max-w-3xl text-4xl font-bold leading-tight text-[#5a193b] md:text-6xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Signature Product yang Siap Tampil Sebagai Brand Premium
+             Signature Product 
           </h2>
-          <p
-            className="text-lg leading-8 text-[#775162]"
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-          >
-            Produk NAGYOZA merupakan camilan inovatif berupa gyoza dengan tambahan olahan kulit
-            buah naga pada adonan kulitnya sehingga menghasilkan warna alami khas yang menarik
-            tanpa pewarna buatan. Dipadukan dengan isian ayam gurih, tekstur lembut, rasa creamy
-            dari keju, serta saus khas berbahan kulit buah naga yang memberikan cita rasa unik dan
-            berbeda dari gyoza pada umumnya.
-          </p>
-          <p
-            className="mt-5 text-lg leading-8 text-[#775162]"
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-          >
-            Produk ini tidak hanya menghadirkan rasa yang lezat, tetapi juga memberikan manfaat
-            kesehatan melalui kandungan nutrisi tambahan dari kulit buah naga yang kaya serat dan
-            antioksidan.
-          </p>
-          <div className="mt-8 inline-flex rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 px-6 py-3 text-lg font-semibold text-white shadow-[0_18px_45px_rgba(219,39,119,0.28)]">
-            Rp15.000 / porsi
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.75, delay: 0.12 }}
+          className="mb-12 overflow-hidden rounded-[34px] border border-white/70 bg-white/45 shadow-[0_28px_90px_rgba(236,72,153,0.12)] backdrop-blur-xl"
+        >
+          <div className="grid gap-6 px-7 py-7 md:grid-cols-[1.15fr_0.85fr] md:px-9 md:py-9">
+            <div>
+              <p
+                className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-[#d05b8f]"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                Premium Food Showcase
+              </p>
+              <h3
+                className="mb-4 max-w-xl text-3xl font-bold leading-tight text-[#571737] md:text-4xl"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                NAGYOZA
+              </h3>
+              <p
+                className="max-w-2xl text-base leading-8 text-[#7b5967]"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                NAGYOZA adalah gyoza premium berbahan kulit buah naga dengan warna alami tanpa pewarna buatan.
+                Dipadukan dengan isian ayam gurih, keju lumer, dan saus khas kulit buah naga, produk ini menghadirkan cita rasa lezat, unik, dan bernilai sehat dalam satu sajian modern.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3 md:grid-cols-1">
+              {[
+                "Warna alami dari kulit buah naga",
+                "Cita rasa gurih ayam dan keju",
+                "Packaging modern siap dipasarkan",
+              ].map((item, index) => (
+                <div
+                  key={item}
+                  className="rounded-[24px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,244,247,0.82))] px-5 py-4 shadow-[0_16px_36px_rgba(236,72,153,0.08)]"
+                >
+                  <div className="mb-3 h-1.5 w-16 rounded-full bg-gradient-to-r from-[#ff6aa7] via-[#ff92c1] to-[#ffd9e7]" />
+                  <p
+                    className="text-sm leading-7 text-[#6f4a5b]"
+                    style={{ fontFamily: "'Poppins', sans-serif" }}
+                  >
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
-        <div className="mb-10 grid gap-6 lg:grid-cols-2">
-          {productCards.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 28 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.1 + index * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="overflow-hidden rounded-[34px] border border-white/70 bg-white/65 p-3 shadow-[0_24px_80px_rgba(236,72,153,0.14)] backdrop-blur-xl"
-            >
-              <div className="relative overflow-hidden rounded-[28px]">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-[380px] w-full object-cover transition-transform duration-700 hover:scale-110"
+        <div className="relative">
+          <div className="pointer-events-none absolute left-1/2 top-10 h-32 w-[75%] -translate-x-1/2 rounded-full bg-pink-200/30 blur-3xl" />
+          <div className="grid gap-7 md:grid-cols-3">
+            {showcaseCards.map((item, index) => (
+              <motion.article
+                key={item.title}
+                initial={{ opacity: 0, y: 28 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7, delay: 0.18 + index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="group relative overflow-hidden rounded-[32px] border border-white/75 bg-white/55 p-3 shadow-[0_24px_70px_rgba(236,72,153,0.12)] backdrop-blur-xl"
+              >
+                <div
+                  className={`absolute inset-x-6 top-4 h-24 rounded-full bg-gradient-to-r ${item.accent} opacity-70 blur-2xl transition-opacity duration-500 group-hover:opacity-100`}
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(76,15,53,0.08),rgba(76,15,53,0.58))]" />
-                <div className="absolute inset-x-5 bottom-5 rounded-[24px] border border-white/30 bg-white/15 p-5 backdrop-blur-md">
-                  <h3
-                    className="mb-3 text-3xl font-bold text-white"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
+                <div className="relative overflow-hidden rounded-[26px] shadow-[0_22px_55px_rgba(88,26,58,0.12)]">
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02)_0%,rgba(88,24,55,0.08)_58%,rgba(88,24,55,0.16)_100%)]" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-[360px] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{
+                      duration: 5 + index,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute inset-x-4 bottom-4 rounded-[20px] border border-white/45 bg-white/16 px-4 py-3 shadow-[0_10px_30px_rgba(77,19,50,0.14)] backdrop-blur-sm"
                   >
-                    {item.title}
-                  </h3>
-                  <p
-                    className="text-base leading-7 text-white/90"
-                    style={{ fontFamily: "'Poppins', sans-serif" }}
-                  >
-                    {item.description}
-                  </p>
+                    <h3
+                      className="text-lg font-bold text-white md:text-xl"
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p
+                      className="mt-1 text-xs leading-6 text-white/90 md:text-sm"
+                      style={{ fontFamily: "'Poppins', sans-serif" }}
+                    >
+                      {item.subtitle}
+                    </p>
+                  </motion.div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.article>
+            ))}
+          </div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 26 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="mb-10 rounded-[36px] border border-white/75 bg-white/60 p-4 shadow-[0_28px_85px_rgba(236,72,153,0.16)] backdrop-blur-xl"
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="mt-14 flex justify-center"
         >
-          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative overflow-hidden rounded-[30px]">
-              <img
-                src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1600&q=80"
-                alt="Video promosi produk NAGYOZA"
-                className="h-full min-h-[360px] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(90,17,61,0.28),rgba(90,17,61,0.68))]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-full border border-white/40 bg-white/20 text-white shadow-[0_18px_45px_rgba(0,0,0,0.18)] backdrop-blur-md">
-                  <PlayCircle className="h-12 w-12 fill-white/30" />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-between rounded-[30px] bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(255,244,249,0.92))] p-8">
-              <div>
-                <p
-                  className="mb-3 inline-flex items-center gap-2 rounded-full bg-pink-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-pink-600"
-                  style={{ fontFamily: "'Poppins', sans-serif" }}
-                >
-                  <Sparkles className="h-4 w-4" />
-                  Video Produk Promosi
-                </p>
-                <h3
-                  className="mb-4 text-3xl font-bold text-[#571738]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  Konsep visual promosi dibuat seperti startup food brand premium.
-                </h3>
-                <p
-                  className="text-base leading-8 text-[#755263]"
-                  style={{ fontFamily: "'Poppins', sans-serif" }}
-                >
-                  Area ini menampilkan hero reel produk untuk kebutuhan branding. Desain player
-                  dibuat sinematik agar website terasa hidup, modern, dan layak dipresentasikan.
-                </p>
-              </div>
-
-              <div className="mt-6 overflow-hidden rounded-[24px] border border-pink-100 bg-[#fff8fb]">
-                <iframe
-                  className="aspect-video w-full"
-                  src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0"
-                  title="Video Produk Promosi NAGYOZA"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </div>
+          <a
+            href="#kontak"
+            className="group inline-flex items-center gap-3 rounded-full bg-[linear-gradient(135deg,#ff5a9f_0%,#ff7bb7_48%,#ffa3c8_100%)] px-8 py-4 text-base font-semibold text-white shadow-[0_20px_45px_rgba(236,72,153,0.24)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_55px_rgba(236,72,153,0.32)]"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            Pesan Sekarang
+            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
         </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {gallery.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 26 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.65, delay: 0.2 + index * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="overflow-hidden rounded-[32px] border border-white/70 bg-white/65 p-3 shadow-[0_20px_65px_rgba(236,72,153,0.13)] backdrop-blur-xl"
-            >
-              <div className="relative overflow-hidden rounded-[24px]">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-[280px] w-full object-cover transition-transform duration-700 hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(88,18,61,0.02),rgba(88,18,61,0.58))]" />
-                <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/18 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md">
-                  <Box className="h-4 w-4" />
-                  {item.title}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
