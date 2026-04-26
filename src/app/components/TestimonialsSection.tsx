@@ -1,6 +1,7 @@
 import { motion, useInView } from "motion/react";
 import { Quote, Star } from "lucide-react";
 import { useRef } from "react";
+import AmbientLayer from "./AmbientLayer";
 
 const testimonials = [
   {
@@ -51,6 +52,7 @@ export default function TestimonialsSection() {
       id="testimoni"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fff9fb_0%,#fff0f6_34%,#fde4f3_68%,#fff7ef_100%)] py-24"
     >
+      <AmbientLayer variant="section" />
       <div className="absolute inset-0">
         <div className="absolute left-[-4%] top-16 h-80 w-80 rounded-full bg-pink-300/24 blur-3xl" />
         <div className="absolute right-[-6%] top-24 h-96 w-96 rounded-full bg-fuchsia-300/20 blur-3xl" />
@@ -111,7 +113,7 @@ export default function TestimonialsSection() {
                 initial={{ opacity: 0, y: 28 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.65, delay: index * 0.08 }}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 className="group relative min-w-[290px] snap-start overflow-hidden rounded-[32px] border border-white/75 bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,243,248,0.7))] p-7 shadow-[0_20px_60px_rgba(236,72,153,0.11)] backdrop-blur-xl transition-all duration-300 hover:shadow-[0_28px_80px_rgba(236,72,153,0.16)] md:min-w-[340px]"
               >
                 <div className="absolute inset-x-8 top-3 h-20 rounded-full bg-gradient-to-r from-pink-200/60 via-fuchsia-200/55 to-violet-200/45 opacity-80 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />

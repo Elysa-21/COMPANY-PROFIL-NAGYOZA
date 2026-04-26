@@ -1,6 +1,7 @@
 import { motion, useInView } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useRef } from "react";
+import AmbientLayer from "./AmbientLayer";
 
 const showcaseCards = [
   {
@@ -33,6 +34,7 @@ export default function ProductSection() {
       id="produk"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fffaf8_0%,#fff2f6_28%,#ffe4ef_58%,#fff5ee_100%)] py-24"
     >
+      <AmbientLayer variant="section" />
       <div className="absolute inset-0">
         <div className="absolute left-[-8%] top-12 h-72 w-72 rounded-full bg-pink-200/45 blur-3xl" />
         <div className="absolute right-[-5%] top-24 h-80 w-80 rounded-full bg-fuchsia-200/35 blur-3xl" />
@@ -122,8 +124,8 @@ export default function ProductSection() {
                 initial={{ opacity: 0, y: 28 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.18 + index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative overflow-hidden rounded-[32px] border border-white/75 bg-white/55 p-3 shadow-[0_24px_70px_rgba(236,72,153,0.12)] backdrop-blur-xl"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group relative overflow-hidden rounded-[32px] border border-white/75 bg-white/55 p-3 shadow-[0_24px_70px_rgba(236,72,153,0.12)] backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_34px_90px_rgba(236,72,153,0.18)]"
               >
                 <div
                   className={`absolute inset-x-6 top-4 h-24 rounded-full bg-gradient-to-r ${item.accent} opacity-70 blur-2xl transition-opacity duration-500 group-hover:opacity-100`}
@@ -171,7 +173,7 @@ export default function ProductSection() {
         >
           <a
             href="#kontak"
-            className="group inline-flex items-center gap-3 rounded-full bg-[linear-gradient(135deg,#ff5a9f_0%,#ff7bb7_48%,#ffa3c8_100%)] px-8 py-4 text-base font-semibold text-white shadow-[0_20px_45px_rgba(236,72,153,0.24)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_55px_rgba(236,72,153,0.32)]"
+            className="group inline-flex items-center gap-3 rounded-full bg-[linear-gradient(135deg,#ff5a9f_0%,#ff7bb7_48%,#ffa3c8_100%)] px-8 py-4 text-base font-semibold text-white shadow-[0_20px_45px_rgba(236,72,153,0.24)] transition-all duration-300 hover:-translate-y-1 hover:brightness-105 hover:shadow-[0_0_35px_rgba(236,72,153,0.26),0_26px_55px_rgba(236,72,153,0.32)]"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             Pesan Sekarang

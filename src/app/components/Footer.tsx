@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Instagram, Mail, MessageCircle, Music2 } from "lucide-react";
 import Logo from "./Logo";
+import AmbientLayer from "./AmbientLayer";
 
 const quickLinks = [
   { label: "Beranda", href: "#hero" },
@@ -37,6 +38,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[linear-gradient(180deg,#62204a_0%,#351122_58%,#17070f_100%)] py-16 text-white">
+      <AmbientLayer variant="footer" />
       <div className="absolute inset-0">
         <div className="absolute left-10 top-0 h-72 w-72 rounded-full bg-pink-500/20 blur-3xl" />
         <div className="absolute right-0 top-10 h-80 w-80 rounded-full bg-fuchsia-500/15 blur-3xl" />
@@ -108,7 +110,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     whileHover={{ y: -4, scale: 1.03 }}
-                    className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/85 backdrop-blur-md transition-colors hover:bg-white/20"
+                    className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/85 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(236,72,153,0.18)]"
                     aria-label={item.label}
                   >
                     <Icon className="h-5 w-5" />
@@ -116,13 +118,6 @@ export default function Footer() {
                 );
               })}
             </div>
-            <p
-              className="text-base leading-8 text-white/70"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
-              Company profile ini dirancang untuk presentasi PMW, proposal bisnis, dan kebutuhan
-              branding usaha yang siap launching.
-            </p>
           </div>
         </div>
 

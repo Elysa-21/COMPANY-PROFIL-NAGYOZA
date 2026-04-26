@@ -75,7 +75,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => scrollToSection("#kontak")}
-              className="rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(219,39,119,0.35)] transition-transform duration-300 hover:scale-[1.03]"
+              className="rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(219,39,119,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:brightness-105 hover:shadow-[0_0_24px_rgba(236,72,153,0.2),0_22px_50px_rgba(219,39,119,0.38)]"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Pesan Sekarang

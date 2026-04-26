@@ -1,6 +1,7 @@
 import { motion, useInView } from "motion/react";
 import { Clock3, Instagram, Mail, MapPin, MessageCircle, Music2 } from "lucide-react";
 import { useRef } from "react";
+import AmbientLayer from "./AmbientLayer";
 
 const contacts = [
   {
@@ -56,6 +57,7 @@ export default function ContactSection() {
       id="kontak"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fff9fb_0%,#ffe6ef_40%,#fdeef4_100%)] py-24"
     >
+      <AmbientLayer variant="section" />
       <div className="absolute inset-0">
         <div className="absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-pink-300/30 blur-3xl" />
         <div className="absolute right-[-5%] top-1/3 h-80 w-80 rounded-full bg-fuchsia-300/30 blur-3xl" />
@@ -109,8 +111,8 @@ export default function ContactSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.65, delay: 0.15 + index * 0.08 }}
-                    whileHover={{ y: -6, scale: 1.01 }}
-                    className="group rounded-[28px] border border-pink-100 bg-white/80 p-6 shadow-[0_18px_50px_rgba(216,70,156,0.12)] transition-all"
+                    whileHover={{ y: -8, scale: 1.03 }}
+                    className="group rounded-[28px] border border-pink-100 bg-white/80 p-6 shadow-[0_18px_50px_rgba(216,70,156,0.12)] transition-all duration-300 hover:shadow-[0_0_24px_rgba(236,72,153,0.14),0_26px_70px_rgba(216,70,156,0.18)]"
                   >
                     <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-fuchsia-500 text-white shadow-lg shadow-pink-300/40 transition-transform group-hover:scale-110">
                       <Icon className="h-6 w-6" />
@@ -143,6 +145,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 24 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.75, delay: 0.2 }}
+            whileHover={{ y: -6, scale: 1.01 }}
             className="rounded-[32px] border border-[#ffd6e4] bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(255,240,247,0.9))] p-8 shadow-[0_32px_90px_rgba(236,72,153,0.16)]"
           >
             <div className="mb-8 rounded-[28px] bg-gradient-to-br from-[#ff5a9f] via-[#ff8fc5] to-[#f4b4d3] p-8 text-white shadow-[0_25px_70px_rgba(236,72,153,0.28)]">

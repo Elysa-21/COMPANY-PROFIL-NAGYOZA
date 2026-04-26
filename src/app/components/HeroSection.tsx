@@ -140,7 +140,7 @@ export default function HeroSection() {
               <button
                 type="button"
                 onClick={() => scrollToSection("#kontak")}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 px-8 py-4 text-lg font-semibold text-white shadow-[0_20px_55px_rgba(219,39,119,0.32)] transition-transform duration-300 hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 px-8 py-4 text-lg font-semibold text-white shadow-[0_20px_55px_rgba(219,39,119,0.32)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:brightness-105 hover:shadow-[0_0_28px_rgba(236,72,153,0.22),0_24px_60px_rgba(219,39,119,0.34)]"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Pesan Sekarang
@@ -149,7 +149,7 @@ export default function HeroSection() {
               <button
                 type="button"
                 onClick={() => scrollToSection("#produk")}
-                className="rounded-full border border-white/65 bg-white/60 px-8 py-4 text-lg font-semibold text-[#792451] shadow-[0_18px_45px_rgba(236,72,153,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80"
+                className="rounded-full border border-white/65 bg-white/60 px-8 py-4 text-lg font-semibold text-[#792451] shadow-[0_18px_45px_rgba(236,72,153,0.15)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/80 hover:shadow-[0_0_24px_rgba(236,72,153,0.12),0_20px_50px_rgba(236,72,153,0.18)]"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Lihat Produk
@@ -193,8 +193,8 @@ export default function HeroSection() {
 
             <div className="grid gap-5">
               <motion.div
-                whileHover={{ y: -8 }}
-                className="overflow-hidden rounded-[36px] border border-white/55 bg-white/50 p-3 shadow-[0_30px_90px_rgba(236,72,153,0.18)] backdrop-blur-2xl"
+                whileHover={{ y: -8, scale: 1.01 }}
+                className="overflow-hidden rounded-[36px] border border-white/55 bg-white/50 p-3 shadow-[0_30px_90px_rgba(236,72,153,0.18)] backdrop-blur-2xl transition-shadow duration-300 hover:shadow-[0_38px_100px_rgba(236,72,153,0.22)]"
               >
                 <div className="relative overflow-hidden rounded-[28px]">
                   <video
@@ -211,8 +211,8 @@ export default function HeroSection() {
               </motion.div>
 
               <motion.div
-                whileHover={{ y: -8 }}
-                className="overflow-hidden rounded-[32px] border border-white/60 bg-white/60 p-3 shadow-[0_22px_70px_rgba(236,72,153,0.16)] backdrop-blur-xl"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="overflow-hidden rounded-[32px] border border-white/60 bg-white/60 p-3 shadow-[0_22px_70px_rgba(236,72,153,0.16)] backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_30px_82px_rgba(236,72,153,0.22)]"
               >
                 <div className="relative overflow-hidden rounded-[24px]">
                   <img

@@ -10,6 +10,7 @@ import {
   Stars,
 } from "lucide-react";
 import { useRef } from "react";
+import AmbientLayer from "./AmbientLayer";
 
 const productAdvantages = [
   {
@@ -85,7 +86,7 @@ function SectionCardGrid({
             initial={{ opacity: 0, y: 26 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: delayOffset + index * 0.08 }}
-            whileHover={{ y: -8 }}
+            whileHover={{ y: -8, scale: 1.03 }}
             className="group relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,244,249,0.72))] p-6 shadow-[0_20px_55px_rgba(236,72,153,0.1)] backdrop-blur-xl transition-shadow duration-300 hover:shadow-[0_28px_75px_rgba(236,72,153,0.16)]"
           >
             <div className="absolute inset-x-6 top-3 h-20 rounded-full bg-gradient-to-r from-pink-200/65 via-fuchsia-200/55 to-purple-200/45 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
@@ -123,6 +124,7 @@ export default function AdvantagesSection() {
       id="keunggulan"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fff9fb_0%,#ffe9f2_32%,#f7e3fb_72%,#fff8f1_100%)] py-24"
     >
+      <AmbientLayer variant="section" />
       <div className="absolute inset-0">
         <div className="absolute left-[-6%] top-10 h-96 w-96 rounded-full bg-pink-300/25 blur-3xl" />
         <div className="absolute right-[-8%] top-1/4 h-[30rem] w-[30rem] rounded-full bg-fuchsia-300/20 blur-3xl" />

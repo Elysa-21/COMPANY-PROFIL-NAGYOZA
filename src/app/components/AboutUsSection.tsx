@@ -1,6 +1,7 @@
 import { motion, useInView } from "motion/react";
 import { Check } from "lucide-react";
 import { useRef } from "react";
+import AmbientLayer from "./AmbientLayer";
 
 const highlightPoints = [
   "Mengurangi limbah pangan",
@@ -19,6 +20,7 @@ export default function AboutUsSection() {
       id="tentang-kami"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fff9fb_0%,#fff0f5_35%,#fef5ec_100%)] py-24"
     >
+      <AmbientLayer variant="section" />
       <div className="absolute inset-0">
         <div className="absolute left-[-6%] top-24 h-80 w-80 rounded-full bg-pink-200/45 blur-3xl" />
         <div className="absolute right-[-10%] top-32 h-96 w-96 rounded-full bg-fuchsia-200/35 blur-3xl" />
@@ -109,6 +111,7 @@ export default function AboutUsSection() {
                   initial={{ opacity: 0, x: -18 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.55, delay: 0.18 + index * 0.08 }}
+                  whileHover={{ y: -6, scale: 1.02 }}
                   className="flex items-center gap-4 rounded-[22px] border border-pink-100/70 bg-white/65 px-5 py-4 shadow-[0_12px_32px_rgba(236,72,153,0.06)] backdrop-blur-sm"
                 >
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-pink-500/90 text-white">
@@ -129,6 +132,7 @@ export default function AboutUsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            whileHover={{ y: -8, scale: 1.01 }}
             className="relative"
           >
             <div className="absolute -right-6 -top-6 hidden h-28 w-28 rounded-full bg-pink-200/35 blur-3xl lg:block" />
