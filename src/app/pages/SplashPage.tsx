@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect } from "react";
+import AmbientLayer from "../components/AmbientLayer";
 
 export default function SplashPage({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -12,6 +13,7 @@ export default function SplashPage({ onComplete }: { onComplete: () => void }) {
 
   return (
     <div className="fixed inset-0 h-full w-full overflow-hidden bg-[linear-gradient(135deg,#fff4fa_0%,#ffcae5_30%,#f2b7f1_58%,#6d2452_100%)]">
+      <AmbientLayer variant="hero" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.28),transparent_34%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_65%,rgba(236,72,153,0.24),transparent_32%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.12),transparent_40%)]" />
