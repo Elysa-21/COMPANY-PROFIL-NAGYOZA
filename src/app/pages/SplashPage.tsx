@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useEffect } from "react";
 import AmbientLayer from "../components/AmbientLayer";
+import Logo from "../components/Logo";
 
 export default function SplashPage({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -97,7 +98,7 @@ export default function SplashPage({ onComplete }: { onComplete: () => void }) {
                     ease: "easeInOut"
                   }}
                 >
-                  <img src="/logo.png" alt="Nagyoza Logo" className="h-72 w-72 object-contain drop-shadow-2xl" />
+                  <Logo className="h-72 w-72 object-contain drop-shadow-2xl" />
                 </motion.div>
               </motion.div>
 
